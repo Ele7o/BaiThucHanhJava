@@ -2,27 +2,26 @@ public class App {
     public static void main(String[] args) throws Exception {
         
 
-        // Câu 1
+        //Câu 1
         // Diem a = new Diem();
-        // Diem b = new Diem();
-        // a.setDiem(4, 6);
-        // b.setDiem(6, 3);
-        // System.out.println(a);
-    
-        // System.out.println(a.tinhKhoangCach(b));
+        // System.out.print(a);
+        // Double kq = new Diem(4,5).tinhKhoangCach(a);
+        // System.out.printf("Khoang cach giua 2 diem: %.2f\n",+kq);
 
         // Câu 2
         // DoanThang x = new DoanThang();
-        // x.setDiem1(4, 5);
-        // x.setDiem2(7,5);
         // System.out.println(x);
-        // System.out.println("Do dai Doan Thang: "+x.doDaiDoanThang());
+        // System.out.println(x.toaDoTrungDiem());
 
-        // System.out.println("Toa do Trung Diem: "+x.toDoTrungDiem());
         // DoanThang y = new DoanThang();
-        // y.setDiem1(4, 4);
-        // y.setDiem2(7, 4);
-        // System.out.println("Doan Thang AB co Song Song voi CD ? :"+x.ktSongSong(y));
+        // System.out.println(y);
+
+        // System.out.println(x.isSongSong(y));
+        // Diem a = new Diem (2,3);
+        // Diem b = new Diem (2,7);
+        // DoanThang x = new DoanThang(a,b);
+        // System.out.println("Do dai doan thang: "+a.tinhKhoangCach(b) );
+        // System.out.println(x.toaDoTrungDiem());
 
         // Câu 3
         // HinhChuNhat hcn = new HinhChuNhat();
@@ -31,19 +30,23 @@ public class App {
         // System.out.println("Dien tich hcn: "+hcn.tinhDienTich());
         // System.out.println("Chu vi hcn: "+hcn.tinhChuVi());
         // System.out.println(hcn);
+            HinhChuNhat hcn = new HinhChuNhat();
+            System.out.println(hcn);
+            System.out.println("Chu vi hinh chu nhat: "+hcn.tinhChuVi());
+            System.out.println("Dien tich hinh chu nhat: "+hcn.tinhDienTich());
 
         // Câu 4
 
-        QLHocVien a = new QLHocVien();
-        a.themHocVien();
-        a.themHocVien();
-        a.themHocVien();
-        a.getListHocVien();
-        a.dienDiemSV();
-        a.xemThongTinHocVien();
-        a.xoaHocVien2();
-        a.getListHocVien();
-        a.xemThongTinHocVien2();
+        // QLHocVien a = new QLHocVien();
+        // a.themHocVien();
+        // a.themHocVien();
+        // a.themHocVien();
+        // a.getListHocVien();
+        // a.dienDiemSV();
+        // a.xemThongTinHocVien();
+        // a.xoaHocVien2();
+        // a.getListHocVien();
+        // a.xemThongTinHocVien2();
         
     }
 }

@@ -1,36 +1,37 @@
 public class HinhChuNhat {
-    private Diem upLeft = new Diem();
-    private Diem dnRight = new Diem();
+    private Diem upLeft;
+    private Diem dnRight;
 
     
+    public HinhChuNhat(){
+        nhapDiem();
+    }
+    public HinhChuNhat(Diem upLeft,Diem dnRight){
+        this.upLeft = upLeft;
+        this.dnRight = dnRight;
+    }
+
+    public void nhapDiem(){
+        System.out.println("Nhap diem Tren Trai: ");
+        upLeft = new Diem();
+        System.out.println("Nhap diem Duoi Phai: ");
+        dnRight = new Diem();
+    }
+
  
-    public void setDiemUpLeft(int a,int b){
-        upLeft.setDiem(a, b);
-    }
-    public void setDiemDnRight(int a,int b){
-        dnRight.setDiem(a, b);
-    }
     public double getChieuDai(){
-        DoanThang w = new DoanThang();
-        w.setDiem1(this.upLeft.getH(), this.upLeft.getT());
-        w.setDiem2(this.dnRight.getH(), this.upLeft.getT());
-        return w.doDaiDoanThang();
+        Diem b = new Diem(dnRight.getH(),upLeft.getT());
+        return upLeft.tinhKhoangCach(b);
     }
     public double getChieuRong(){
-        DoanThang h = new DoanThang();
-        h.setDiem1(this.dnRight.getH(), this.upLeft.getT());
-        h.setDiem2(this.dnRight.getH(),this.dnRight.getT());
-        return h.doDaiDoanThang();
+        Diem b = new Diem(dnRight.getH(), upLeft.getT());
+        return dnRight.tinhKhoangCach(b);
     }
     public double tinhDienTich(){
-        
-        double kq = getChieuDai() * getChieuRong();
-        return kq;
+        return  getChieuDai() * getChieuRong();
     }
     public double tinhChuVi(){
-        
-        double kq = (getChieuDai() + getChieuRong())*2;
-        return kq;
+        return  (getChieuDai() + getChieuRong())*2;
     }
     public String toString(){
         return "Toa Do 4 Diem cua Hinh Chu Nhat: \n("+upLeft.getH()+","+upLeft.getT()+") ("+dnRight.getH()+","+upLeft.getT()+")\n("+dnRight.getT()+","+upLeft.getH()+") ("+dnRight.getH()+","+dnRight.getT()+")";
